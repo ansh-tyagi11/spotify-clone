@@ -1,0 +1,22 @@
+HTML
+<div class="dropdown">
+        <button>link</a></button>
+        <div class="content">
+            <a href="">abc</a>
+            <a href="">abc</a>
+            <a href="">abc</a>
+        </div>
+     </div>
+
+CSS     
+.dropdown {
+    position: absolute;
+}
+
+.content {
+    position: absolute;
+    display: none;
+}
+.dropdown:hover .content {
+    display: block;
+}

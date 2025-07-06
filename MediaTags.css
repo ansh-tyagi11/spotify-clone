@@ -1,0 +1,154 @@
+@media only screen and (max-width:1024px) {
+    .nav {
+        max-height: 32px;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .navmid .search img {
+        padding: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .navmid .search {
+        padding: 0;
+        margin: -3px;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .bucket {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:455px) {
+    .body {
+        background-color: black;
+        /* margin-bottom: 50px; */
+        padding: 0;
+        max-width: 100vw;
+        max-height: 100vh;
+        font-size: small;
+        font-family: SpotifyMixUITitleVariable, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif), Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic, sans-serif;
+    }
+
+    .nav {
+        max-height: 32px;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .home {
+        padding: 3px 5px 3px 5px;
+        margin-left: 2px;
+    }
+
+    .navmid .search img {
+        padding: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    .navmid .search {
+        padding: 0;
+        margin: -3px;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .bucket {
+        display: none;
+    }
+
+    .part1 {
+        display: none;
+    }
+
+    .bar {
+        display: none;
+    }
+
+    .install {
+        font-size: 14px;
+        padding: 0;
+        margin-right: 6px !important;
+    }
+
+    .sign {
+        margin-left: 2px;
+        margin-right: 6px;
+    }
+
+    .login {
+        padding: 4px 16px !important;
+        margin-right: 0px !important;
+    }
+
+    .left {
+        /* display: none; */
+        padding-top: 0px;
+        max-height: 85vh;
+    }
+
+
+    .container {
+        height: 85vh;
+        box-sizing: border-box;
+    }
+
+    .library {
+        margin-bottom: 10px;
+    }
+
+    .library img {
+        height: 12px;
+        width: 12px;
+    }
+
+    .box1 {
+        margin-top: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        font-size: small;
+    }
+
+    .create-playlist-btn {
+        padding: 4px 8px;
+    }
+
+    .links {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        font-size: small;
+    }
+
+    .links a {
+        margin-bottom: 0;
+    }
+
+    .language {
+        margin-top: 10px;
+        margin-bottom: 2px;
+    }
+
+    .rightpart {
+        width: 100vw;
+        max-height: 75vh;
+    }
+
+    .trending1 {
+        font-size: 20px;
+    }
+    .showall{
+        font-size: 15px;
+    }
+}
