@@ -170,9 +170,12 @@
     margin-bottom: 100px;
 }
 
-.media {
-    display: inline-block;
-    min-height: 64px !important;
-    width: 642.4px;
+.play {
+    width: 80%;
+    height: 3.3rem;
+    position: fixed;
     border: 1px solid red;
+    margin: 3px;
+    background-color: #1ed760;
+    border-radius: 5px;
 }

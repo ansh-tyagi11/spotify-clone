@@ -24,6 +24,20 @@
     .bucket {
         display: none;
     }
+
+    .links {
+        margin-top: 10px;
+    }
+
+    .links a {
+        margin-bottom: 5px;
+    }
+
+    .language {
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-bottom: 2px;
+    }
 }
 
 @media only screen and (max-width:455px) {
@@ -95,9 +109,8 @@
     .left {
         /* display: none; */
         padding-top: 0px;
-        max-height: 85vh;
+        max-height: 89vh;
     }
-
 
     .container {
         height: 85vh;
@@ -137,18 +150,30 @@
 
     .language {
         margin-top: 10px;
+        /* margin-left: 0; */
+        /* margin-left: 5px; */
         margin-bottom: 2px;
     }
 
     .rightpart {
-        width: 100vw;
-        max-height: 75vh;
+        width: 45vw;
+        max-height: 79vh;
     }
 
     .trending1 {
         font-size: 20px;
     }
-    .showall{
+
+    .showall {
         font-size: 15px;
+    }
+
+    .play {
+        width: 65vw;
+        height: 8vh;
+        position: fixed;
+        border: 1px solid red;
+        margin: 3px;
+        background-color: #1ed760;
     }
 }
