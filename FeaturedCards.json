@@ -1,0 +1,38 @@
+  [
+  {
+      "title": "Top Songs Global",
+      "type": "Weekly Music Charts",
+      "description": "Your weekly update of the most played tracks right...",
+      "image": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg"
+    },
+    {
+      "title": "Top Songs India",
+      "type": "Weekly Music Charts",
+      "description": "Your weekly update of the most played tracks right...",
+      "image": "https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_in_default.jpg"
+    },
+    {
+      "title": "Top 50 Global",
+      "type": "Daily Chart",
+      "description": "Your daily update of the most played tracks right...",
+      "image": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_global_default.jpg"
+    },
+    {
+      "title": "Top 50 India",
+      "type": "Daily Chart",
+      "description": "Your daily update of the most played tracks right...",
+      "image": "https://charts-images.scdn.co/assets/locale_en/regional/daily/region_in_default.jpg"
+    },
+    {
+      "title": "Viral 50 Global",
+      "type": "Daily Chart",
+      "description": "Your daily update of the most viral tracks right now...",
+      "image": "https://charts-images.scdn.co/assets/locale_en/viral/daily/region_global_default.jpg"
+    },
+    {
+      "title": "Viral 50 India",
+      "type": "Daily Chart",
+      "description": "Your daily update of the most viral tracks right now...",
+      "image": "https://charts-images.scdn.co/assets/locale_en/viral/daily/region_in_default.jpg"
+    }
+  ]

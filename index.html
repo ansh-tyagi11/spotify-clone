@@ -5,18 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Clone</title>
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="style2.css">
-    <link rel="stylesheet" href="utility1.css">
-    <link rel="stylesheet" href="utility2.css">
     <link rel="stylesheet" href="MediaTags.css">
 </head>
 
 <body>
     <div class="nav flex align-items">
         <div class="1 flex align-items">
-            <div class="logo"><img src="images/logo.svg" width="24" height="24" alt=""></div>
-            <div class="home"><img src="images/home.svg" alt=""></div>
+            <div class="logo">
+                <img src="images/logo.svg" width="24" height="24" alt="">
+            </div>
+            <div class="home">
+                <img src="images/home.svg" alt="">
+            </div>
             <div class="navmid flex align-items justify-content2">
                 <div class="search"><img src="images/Search.svg" alt=""></div>
                 <!-- <div class="text">What do you want to play ?</div> -->
@@ -79,8 +81,8 @@
         </div>
 
         <!-- Mid Part Of Website -->
-        <div class="mid flex">
-        </div>
+        <!-- <div class="mid flex">
+        </div> -->
 
         <!-- Right Part Of Website -->
         <div>
@@ -89,28 +91,22 @@
                 <!-- Trending -->
                 <div class="heading flex ">
                     <h1 class="trending1 text2">Trending Now</h1>
-                    <div class="showall text2">Show all</div>
+                    <div class="showall text2" onclick="showAll()">Show all</div>
                 </div>
-                <!-- Card 1 -->
+
                 <div class="trending flex">
-                    <div class="card">
-                        <img src="https://i.scdn.co/image/ab67616d00001e026fbb60d6a7e03ccb940a518e"
-                            alt="Sapphire album cover">
-                        <div class="green"><img src="images/green.svg"></div>
-                        <div class="flex2">
-                            <h2 class="text2">Sapphire</h2>
-                            <p class="text2">Ed Sherrene</p>
+                    <!-- Trending Cards -->
+                    <!-- <div class="card">
+
+                    </div> -->
+                    <div class="trending-scroll-wrapper">
+                        <img src="images/leftarrow.svg" class="arrow leftarrow" />
+
+                        <div class="card-container">
+                            <div class="card" id="cardScroll"></div>
                         </div>
-                    </div>
-                    <!-- Card2 -->
-                    <div class="card">
-                        <img src="https://i.scdn.co/image/ab67616d00001e02d31e36dcb8ea9596de899469"
-                            alt="Sapphire album cover">
-                        <div class="green"><img src="images/green.svg"></div>
-                        <div class="flex2">
-                            <h2 class="text2">Sapphire</h2>
-                            <p class="text2">Ed Sherrene</p>
-                        </div>
+
+                        <img src="images/rightarrow.svg" class="arrow rightarrow" />
                     </div>
 
                 </div>
@@ -119,28 +115,69 @@
                     <h1 class="text2">Popular Artists</h1>
                     <div class="showall text2">Show all</div>
                 </div>
-                <div class="trending flex">
-                    <!-- Artist 1 -->
-                    <div class="circle">
-                        <img src="https://i.scdn.co/image/ab67616d00001e026fbb60d6a7e03ccb940a518e"
-                            alt="Sapphire album cover">
-                        <div class="green"><img src="images/green.svg"></div>
-                        <div class="flex2">
-                            <h2 class="text2">Sapphire</h2>
-                        </div>
-                    </div>
-                    <!-- Artist 2 -->
-                    <div class="circle">
-                        <img src="https://i.scdn.co/image/ab67616d00001e026fbb60d6a7e03ccb940a518e"
-                            alt="Sapphire album cover">
-                        <div class="green"><img src="images/green.svg"></div>
-                        <div class="flex2">
-                            <h2 class="text2">Sapphire</h2>
-                        </div>
-                    </div>
 
+                <div class="trending flex">
+                    <!-- Experiment -->
+                    <div class="circle">
+
+                    </div>
 
                 </div>
+
+                <!-- Popular Songs -->
+                <div class="heading flex ">
+                    <h1 class="trending1 text2">Popular albums and singles</h1>
+                    <div class="showall text2" onclick="showAll()">Show all</div>
+                </div>
+
+                <div class="trending flex">
+                    <!-- Popular Songs Cards -->
+                    <div class="popularcards">
+
+                    </div>
+                </div>
+
+
+                <!-- Popular Radio -->
+                <div class="heading flex ">
+                    <h1 class="trending1 text2">Popular Radio</h1>
+                    <div class="showall text2" onclick="showAll()">Show all</div>
+                </div>
+
+                <!-- Popular Radio Cards -->
+                <div class="trending flex">
+                    <div class="radiocards">
+
+                    </div>
+                </div>
+
+                <!-- Featured -->
+                <div class="heading flex ">
+                    <h1 class="trending1 text2">Featured Charts</h1>
+                    <div class="showall text2" onclick="showAll()">Show all</div>
+                </div>
+
+                <!-- Featured Charts Cards -->
+                <div class="trending flex">
+                    <div class="chartscards">
+
+                    </div>
+                </div>
+
+                <!--Indian Music Playlist  -->
+                <div class="heading flex ">
+                    <h1 class="trending1 text2">India's Best</h1>
+                    <div class="showall text2" onclick="showAll()">Show all</div>
+                </div>
+
+                <!-- Indian Music Playlist Cards -->
+                <div class="trending flex">
+                    <div class="impcards">
+
+                    </div>
+                </div>
+
+
                 <!-- Footer  -->
                 <div class="footer">
                     <!-- Horizontal Bar -->
@@ -194,13 +231,28 @@
                     <div class="copy">Copyright © 2024 Spotify Clone</div>
                 </div>
             </div>
-            <div class="play">
-                <span style="color: white;">the value is</span>
+            <div class="playbar">
+                <div>
+                    <span style=" display: flex; justify-content: center; max-height: 24px;">
+                        <img class="previousSong" onclick="previousSong()" src="images/previousSong.svg" alt="">
+                        <img class="play" onclick="play()" src="images/play.svg" alt="">
+                        <img class="nextSong" onclick="nextSong()" src="images/nextSong.svg" alt="">
+                    </span>
+                    <div class="volume" style="display:flex; justify-content: end; align-items: center;">
+                        <img class="mute" onclick="mute()" width="25" src="images/volume.svg" alt="">
+                        <div class="range">
+                            <input type="range" name="volume" id="">
+                        </div>
+                    </div>
+                    <div class="seekbar">
+                        <span class="white" style="color: white;"></span>
+                        <span class="moveable"></span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- <div><img src="images/hamburger.svg" alt=""></div> -->
-    <script src="script.js"></script>
+        <!-- <div><img src="images/hamburger.svg" alt=""></div> -->
+        <script src="script.js"></script>
 </body>
 
 </html>

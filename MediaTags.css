@@ -109,7 +109,7 @@
     .left {
         /* display: none; */
         padding-top: 0px;
-        max-height: 89vh;
+        max-height: 87vh;
     }
 
     .container {
@@ -126,6 +126,9 @@
         width: 12px;
     }
 
+    /* .box1 h3{
+    margin-top: 0px;
+    } */
     .box1 {
         margin-top: 0px;
         padding-bottom: 0px;
@@ -157,7 +160,7 @@
 
     .rightpart {
         width: 45vw;
-        max-height: 79vh;
+        max-height: 77vh;
     }
 
     .trending1 {
@@ -168,12 +171,20 @@
         font-size: 15px;
     }
 
-    .play {
+    /* .play {
         width: 65vw;
         height: 8vh;
         position: fixed;
         border: 1px solid red;
         margin: 3px;
+        background-color: #1ed760;
+    } */
+    .play {
+        /* width: 65vw; */
+        /* height: 8vh; */
+        /* position: fixed; */
+        /* border: 1px solid red; */
+        /* margin: 3px; */
         background-color: #1ed760;
     }
 }
