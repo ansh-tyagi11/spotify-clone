@@ -1,289 +1,101 @@
-.rightpart {
-    border: none;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    /* overflow-x: scroll; */
-    /* overflow-x:hidden ; */
-    max-height: 80vh;
-}
-
-.right2 {
-    border-radius: 10px;
-    padding: 0 40px;
-    background-image: linear-gradient(#1f1f1f, #121212);
-    color: white;
-}
-
-.heading {
-    padding-top: 40px;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.showall {
-    color: #b3b3b3;
-}
-
-.trending {
-    flex-wrap: wrap;
-}
-
-.card,
-.popularcards,
-.radiocards,
-.impcards,
-.chartscards {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-start;
-    margin-top: 20px;
-}
-
-.song-card,
-.popular-card,
-.radio-card,
-.imp-card,
-.charts-card {
-    width: 154px;
-    position: relative;
-    border-radius: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px;
-    margin-top: 10px;
-    gap: 4px;
-    overflow: hidden;
-}
-
-.song-card>img,
-.popular-card>img,
-.radio-card>img,
-.imp-card>img,
-.charts-card>img {
-    object-fit: fill;
-    height: 184px;
-    width: 154px;
-    border-radius: 10px;
-}
-
-.song-card:hover,
-.popular-card:hover,
-.radio-card:hover,
-.imp-card:hover,
-.charts-card:hover {
-    background-color: #252525;
-}
-
-.song-card h2,
-.popular-card h2,
-.radio-card h2,
-.charts-card {
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.song-card p,
-.popular-card p,
-.radio-card p,
-.imp-card p,
-.circle p,
-.charts-card p {
-    font-size: 14px;
-    font-weight: 400;
-    color: #b3b3b3;
-    overflow: hidden;
-    width: 154px;
-    white-space: nowrap;
-    /* Prevents text from wrapping */
-    text-overflow: ellipsis;
-    /* Adds the "..." at the end */
-}
-
-.green {
-    position: absolute;
-    bottom: 60px;
-    right: 20px;
-}
-
-.green img {
-    height: 20px;
-    width: 20px;
-    display: none;
-    padding: 10px;
-    background-color: #1ed760;
-    border-radius: 100%;
-}
-
-.song-card:hover .green img,
-.circle-card:hover .green img,
-.popular-card:hover .green img,
-.radio-card:hover .green img,
-.imp-card:hover .green img,
-.charts-card:hover .green img {
-    display: block;
-}
-
-.green img:hover {
-    transform: scale(1.1);
-}
-
-.circle {
-    display: flex;
-}
-
-.circle-card {
-    position: relative;
-    border-radius: 10px;
-    flex-direction: row !important;
-    align-items: flex-start;
-    padding: 5px 5px 5px 5px;
-    margin-top: 10px;
-    gap: 4px;
-}
-
-.circle-card>img {
-    object-fit: cover;
-    height: 164px;
-    width: 164px;
-    border-radius: 100%;
-}
-
-.circle-card:hover {
-    background-color: #252525;
-}
-
-.longbar {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    height: 0.001px;
-    border: 0.001px solid #b3b3b3;
-}
-
-.f1s {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 50px;
-}
-
-.footer1 {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.company {
-    /* width: 20%; */
-    margin-right: 24px;
-    margin-bottom: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.company>a {
-    color: #b3b3b3;
-    text-decoration: none;
-}
-
-.company>a:hover {
-    color: white;
-    text-decoration: underline;
-}
-
-.social {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-}
-
-.social img {
-    filter: invert(1);
-    width: 20px;
-    height: 20px;
-    background-color: #b3b3b3;
-    padding: 10px;
-    border-radius: 100%;
-}
-
-.copy {
-    margin-bottom: 100px;
-}
-
-.playbar {
-    width: 80%;
-    height: 5rem;
-    position: fixed;
-    border: 1px solid #1ed760;
-    margin: 3px;
-    background-color: #1ed760;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-}
-
-.playbar span img {
-    width: 20px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.volume {
-    gap: 10px;
-    margin-right: 10px;
-}
-
-.seekbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.white {
-    height: 0.01px;
-    width: 80vh;
-    border: 1px solid white;
-}
-
-.moveable {
-    border-radius: 100%;
-    width: 10px;
-    height: 10px;
-    border: 1px solid white;
-}
-
+/* --------------------------------------------CSS SCROLLBAR-------------------------------------------- */
+/* Container for the trending section with scroll arrows */
 .trending-scroll-wrapper {
-  display: flex;
-  align-items: center;
-  /* gap: 10px; */
-  position: relative;
+    display: flex;
+    /* Makes it a flex container (items arranged in a row) */
+    align-items: center;
+    /* Vertically centers its children (arrows + cards) */
+    position: relative;
+    /* So arrows can be positioned absolutely within it */
+    width: 100%;
+    /* Full width of its parent */
 }
 
-.arrow {
-  width: 20px;
-  height: 30px;
-  cursor: pointer;
-  z-index: 1;
+.trending-scroll-wrapper:hover .arrow {
+    display: block !important;
+    /* Shows arrows when hovering over the wrapper */
+    pointer-events: auto;
+    /* Allows interaction with arrows when hovered */
 }
 
+/* Scrollable container holding the song cards */
 .card-container {
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  white-space: nowrap;
-  width: 100%;
-  padding: 0 8px;
+    overflow-x: auto;
+    /* Allows horizontal scrolling */
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling (when scrolled programmatically) */
+    width: 100%;
+    /* Full width of wrapper */
+    display: block;
+    /* Block element (not flex) */
+    white-space: nowrap;
+    /* Prevents items from wrapping (keeps them in one row) */
+    flex: none;
+    /* Prevents it from shrinking inside flex parent */
 }
 
+/* Hides scrollbar (for WebKit browsers like Chrome, Safari) */
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Container for all cards (acts as the row of cards) */
 .card {
-  display: flex;
-  gap: 12px;
-  flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    /* Prevents cards from wrapping to the next line */
+    display: inline-flex;
+    /* Displays child items as flex but in an inline-block way */
 }
 
+/* Styles for each individual song card */
 .song-card {
-  flex: 0 0 auto;
-  width: 154px;
-  border-radius: 10px;
-  padding: 12px;
-  /* background: #f1f1f1; */
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition on hover */
+    flex: 0 0 auto;
+    /* Prevent shrinking and growing (fixed width) */
+    width: 154px;
+    /* Fixed width for each card */
+    height: 250px;
+    /* Fixed height for each card */
+}
+
+/* General styles for both left/right scroll arrows */
+.arrow {
+    display: none !important;
+    pointer-events: none;
+    /* Prevents interaction when not hovered */
+    position: absolute;
+    /* Position relative to .trending-scroll-wrapper */
+    top: 50%;
+    /* Vertically centered */
+    transform: translateY(-50%);
+    /* Centers arrow exactly in the middle vertically */
+    z-index: 2;
+    /* Ensures arrows stay above cards */
+    background-color: #252525;
+    /* Dark background for visibility */
+    border-radius: 100%;
+    /* Makes it circular */
+    padding: 8px 0px 0px 8px;
+    /* Space around the arrow icon */
+    cursor: pointer;
+    /* Cursor changes to pointer (clickable) */
+    display: block;
+    /* Makes sure it's displayed as a block */
+}
+
+/* Positioning for left arrow */
+.leftarrow {
+    left: 0;
+    /* Sticks to the left side */
+}
+
+/* Positioning for right arrow */
+.rightarrow {
+    right: 0;
+    /* Sticks to the right side */
+}
+
+.rightpart::-webkit-scrollbar {
+    display: none;
 }

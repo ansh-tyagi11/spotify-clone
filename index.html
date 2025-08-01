@@ -4,29 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the spotify clone.">
+    <meta name="keywords" content="PlayMusic ,HTML,CSS,JavaScript">
     <title>Spotify Clone</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">>
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="MediaTags.css">
+    <!-- <link rel="icon" href="data:,"> -->
 </head>
 
 <body>
     <div class="nav flex align-items">
         <div class="1 flex align-items">
             <div class="logo">
-                <img src="images/logo.svg" width="24" height="24" alt="">
+                <img src="images/logo.svg" width="24" height="24" alt="logo">
             </div>
             <div class="home">
-                <img src="images/home.svg" alt="">
+                <img src="images/home.svg" alt="Home">
             </div>
             <div class="navmid flex align-items justify-content2">
-                <div class="search"><img src="images/Search.svg" alt=""></div>
+                <div class="search"><img src="images/Search.svg" alt="Search"></div>
                 <!-- <div class="text">What do you want to play ?</div> -->
-                <div class="text"><input style="border: none;" type="text" placeholder="What do you want to play ?">
+                <div class="text">
+                    <label for="search"></label>
+                    <input id="search" style="border: none;" type="text" placeholder="What do you want to play ?">
                 </div>
                 <div class="bucket flex ">
                     <span class="bar1"></span>
-                    <img src="images/bucket.svg" alt="">
+                    <img src="images/bucket.svg" alt="Bucket">
                 </div>
             </div>
         </div>
@@ -39,7 +44,7 @@
                 </span>
                 <div class="bar"></div>
                 <div class="install flex align-items">
-                    <div class="download"><img src="images/download.svg" width="15" height="15" alt=""></div>
+                    <div class="download"><img src="images/download.svg" width="15" height="15" alt="Download"></div>
                     <div class="text1">Install App</div>
                 </div>
                 <button class="sign">Sign Up</button>
@@ -54,7 +59,7 @@
         <div class="left">
             <div class="library flex">
                 Your Library
-                <div class="add"><img class="invert" src="images/add.svg" width="24px" height="24px" alt=""></div>
+                <div class="add"><img class="invert" src="images/add.svg" width="24px" height="24px" alt="Add"></div>
             </div>
             <div class="box1 border">
                 <h3>Create your first Playlist</h3>
@@ -77,105 +82,184 @@
             <div class="hover"><a target="_blank" href="https://open.spotify.com"
                     style="color: white; text-decoration: none; margin: 0px 8px;font-size: 12px;">Cookies</a></div>
             <button class="language flex align-items"><img class="invert" src="images/language.svg" width="16"
-                    height="16" alt="">English</button>
+                    height="16" alt="language">English</button>
         </div>
 
+
+
+        <!-- Left Part Of Website -->
+        <span>
+            <!-- <img id="hamburger" src="images/hamburger.svg" alt="" style="filter: invert(1);"> -->
+            <div class="left">
+                <!--<div class="library flex">
+                    Your Library
+                    <div class="add"><img class="invert" src="images/add.svg" width="24px" height="24px" alt="Add">
+                    </div>
+                </div>
+                <div class="box1 border">
+                    <h3>Create your first Playlist</h3>
+                    <p>It's easy,we'll help you</p>
+                    <button class="create-playlist-btn">Create playlist</button>
+                </div>
+                <div class="box1 border" style="margin-top: 10px;">
+                    <h3>Let's find the some podcasts to follow</h3>
+                    <p>We will keep updated on new episodes</p>
+                    <button class="create-playlist-btn">Browse podcasts</button>
+                </div>
+                <div class="links">
+                    <a target="_blank" href="https://open.spotify.com">Legal</a>
+                    <a target="_blank" href="https://open.spotify.com">Safety & Privacy Centre</a>
+                    <a target="_blank" href="https://open.spotify.com">Privacy Policy</a>
+                    <a target="_blank" href="https://open.spotify.com">Cookies</a>
+                    <a target="_blank" href="https://open.spotify.com">Accessibility</a>
+                    <a target="_blank" href="https://open.spotify.com">About Ads</a>
+                </div>
+                <div class="hover"><a target="_blank" href="https://open.spotify.com"
+                        style="color: white; text-decoration: none; margin: 0px 8px;font-size: 12px;">Cookies</a></div>
+                <button class="language flex align-items"><img class="invert" src="images/language.svg" width="16"
+                        height="16" alt="language">English</button>-->
+            </div>
+        </span>
+
+
+
         <!-- Mid Part Of Website -->
-        <!-- <div class="mid flex">
-        </div> -->
+        <div class="mid">
+            <div class="mid2"></div>
+        </div>
 
         <!-- Right Part Of Website -->
         <div>
             <div class="rightpart right2 border2">
 
                 <!-- Trending -->
-                <div class="heading flex ">
-                    <h1 class="trending1 text2">Trending Now</h1>
-                    <div class="showall text2" onclick="showAll()">Show all</div>
-                </div>
+                <span class="trending">
+                    <div class="heading flex ">
+                        <h1 class="trending1 text2">Trending Now</h1>
+                        <div class="showall text2 mt" onclick="showAll('trending')">Show all</div>
+                    </div>
 
-                <div class="trending flex">
-                    <!-- Trending Cards -->
-                    <!-- <div class="card">
+                    <div class="trending flex">
+                        <!-- Trending Cards -->
+                        <div class="trending-scroll-wrapper">
+                            <img src="images/leftarrow.svg" class="arrow leftarrow" alt="leftarrow" />
 
-                    </div> -->
-                    <div class="trending-scroll-wrapper">
-                        <img src="images/leftarrow.svg" class="arrow leftarrow" />
+                            <div class="card-container">
+                                <div class="card" id="cardScroll"></div>
+                            </div>
 
-                        <div class="card-container">
-                            <div class="card" id="cardScroll"></div>
+                            <img src="images/rightarrow.svg" class="arrow rightarrow" alt="rightarrow" />
                         </div>
-
-                        <img src="images/rightarrow.svg" class="arrow rightarrow" />
                     </div>
+                </span>
 
-                </div>
                 <!-- Popular Artists -->
-                <div class="heading flex">
-                    <h1 class="text2">Popular Artists</h1>
-                    <div class="showall text2">Show all</div>
-                </div>
-
-                <div class="trending flex">
-                    <!-- Experiment -->
-                    <div class="circle">
-
+                <span class="popularartist">
+                    <div class="heading flex">
+                        <h1 class="text2">Popular Artists</h1>
+                        <div class="showall text2 mt" onclick="showAll('popularartist')">Show all</div>
                     </div>
 
-                </div>
+                    <div class="trending flex">
+                        <!-- Experiment -->
+                        <div class="trending-scroll-wrapper">
+                            <img src="images/leftarrow.svg" class="arrow leftarrow" alt="leftarrow" />
+
+                            <div class="card-container">
+                                <div class="circle" id="cardScroll">
+
+                                </div>
+                            </div>
+
+                            <img src="images/rightarrow.svg" class="arrow rightarrow" alt="rightarrow" />
+                        </div>
+                    </div>
+                </span>
 
                 <!-- Popular Songs -->
-                <div class="heading flex ">
-                    <h1 class="trending1 text2">Popular albums and singles</h1>
-                    <div class="showall text2" onclick="showAll()">Show all</div>
-                </div>
-
-                <div class="trending flex">
-                    <!-- Popular Songs Cards -->
-                    <div class="popularcards">
-
+                <span class="popularsongs">
+                    <div class="heading flex ">
+                        <h1 class="trending1 text2">Popular albums and singles</h1>
+                        <div class="showall text2 mt" onclick="showAll('popularsongs')">Show all</div>
                     </div>
-                </div>
+
+                    <div class="trending flex">
+                        <!-- Popular Songs Cards -->
+                        <div class="trending-scroll-wrapper">
+                            <img src="images/leftarrow.svg" class="arrow leftarrow" alt="leftarrow" />
+                            <div class="card-container">
+                                <div class="popularcards" id="cardScroll">
+
+                                </div>
+                            </div>
+                            <img src="images/rightarrow.svg" class="arrow rightarrow" alt="rightarrow" />
+                        </div>
+                    </div>
+                </span>
 
 
                 <!-- Popular Radio -->
-                <div class="heading flex ">
-                    <h1 class="trending1 text2">Popular Radio</h1>
-                    <div class="showall text2" onclick="showAll()">Show all</div>
-                </div>
-
-                <!-- Popular Radio Cards -->
-                <div class="trending flex">
-                    <div class="radiocards">
-
+                <span class="popularradio">
+                    <div class="heading flex ">
+                        <h1 class="trending1 text2">Popular Radio</h1>
+                        <div class="showall text2 mt" onclick="showAll('popularradio')">Show all</div>
                     </div>
-                </div>
+
+                    <!-- Popular Radio Cards -->
+                    <div class="trending flex">
+                        <div class="trending-scroll-wrapper">
+                            <img src="images/leftarrow.svg" class="arrow leftarrow" alt="leftarrow" />
+                            <div class="card-container">
+                                <div class="radiocards" id="cardScroll">
+
+                                </div>
+                            </div>
+                            <img src="images/rightarrow.svg" class="arrow rightarrow" alt="rightarrow" />
+                        </div>
+                    </div>
+                </span>
 
                 <!-- Featured -->
-                <div class="heading flex ">
-                    <h1 class="trending1 text2">Featured Charts</h1>
-                    <div class="showall text2" onclick="showAll()">Show all</div>
-                </div>
-
-                <!-- Featured Charts Cards -->
-                <div class="trending flex">
-                    <div class="chartscards">
-
+                <span class="featured">
+                    <div class="heading flex ">
+                        <h1 class="trending1 text2">Featured Charts</h1>
+                        <div class="showall text2 mt" onclick="showAll('featured')">Show all</div>
                     </div>
-                </div>
+
+                    <!-- Featured Charts Cards -->
+                    <div class="trending flex">
+                        <div class="trending-scroll-wrapper">
+                            <img src="images/leftarrow.svg" class="arrow leftarrow" alt="leftarrow" />
+                            <div class="card-container">
+                                <div class="chartscards" id="cardScroll">
+
+                                </div>
+                            </div>
+                            <img src="images/rightarrow.svg" class="arrow rightarrow" alt="rightarrow" />
+                        </div>
+                    </div>
+                </span>
 
                 <!--Indian Music Playlist  -->
-                <div class="heading flex ">
-                    <h1 class="trending1 text2">India's Best</h1>
-                    <div class="showall text2" onclick="showAll()">Show all</div>
-                </div>
-
-                <!-- Indian Music Playlist Cards -->
-                <div class="trending flex">
-                    <div class="impcards">
-
+                <span class="Indian_Music_Playlist">
+                    <div class="heading flex ">
+                        <h1 class="trending1 text2">India's Best</h1>
+                        <div class="showall text2 mt" onclick="showAll('Indian_Music_Playlist')">Show all</div>
                     </div>
-                </div>
+
+                    <!-- Indian Music Playlist Cards -->
+                    <div class="trending flex">
+                        <div class="trending-scroll-wrapper">
+                            <div class="card-container">
+                                <img src="images/leftarrow.svg" class="arrow leftarrow" alt="Left Arrow" />
+                                <div class="impcards" id="cardScroll">
+
+                                </div>
+                            </div>
+                            <img src="images/rightarrow.svg" class="arrow rightarrow" alt="Right Arrow" />
+                        </div>
+                    </div>
+                </span>
 
 
                 <!-- Footer  -->
@@ -220,9 +304,9 @@
                         </div>
                         <!-- Social Media Platform -->
                         <div class="social">
-                            <div class="insta"><img src="images/instagram.svg" alt=""></div>
-                            <div class="twitter"><img src="images/x.svg" alt=""></div>
-                            <div class="facebook"><img src="images/facebook.svg" alt=""></div>
+                            <div class="insta"><img src="images/instagram.svg" alt="Instagram"></div>
+                            <div class="twitter"><img src="images/x.svg" alt="X"></div>
+                            <div class="facebook"><img src="images/facebook.svg" alt="Facebook"></div>
                         </div>
                     </div>
                     <!-- Horizontal Bar 2 -->
@@ -234,25 +318,39 @@
             <div class="playbar">
                 <div>
                     <span style=" display: flex; justify-content: center; max-height: 24px;">
-                        <img class="previousSong" onclick="previousSong()" src="images/previousSong.svg" alt="">
-                        <img class="play" onclick="play()" src="images/play.svg" alt="">
-                        <img class="nextSong" onclick="nextSong()" src="images/nextSong.svg" alt="">
+                        <img id="previousSong" src="images/previousSong.svg" alt="Previous Song">
+                        <img class="play" onclick="play()" src="images/play.svg" alt="Play">
+                        <img id="nextSong" src="images/nextSong.svg" alt="Next Song">
                     </span>
-                    <div class="volume" style="display:flex; justify-content: end; align-items: center;">
-                        <img class="mute" onclick="mute()" width="25" src="images/volume.svg" alt="">
-                        <div class="range">
-                            <input type="range" name="volume" id="">
+
+                    <span style="display: flex; justify-content:space-between; align-items: center;">
+                        <span>
+                            <span id="songname">
+
+                            </span>
+
+                            <span id="time" style="margin-left: 10px;"></span>
+                        </span>
+                        <div class="volume" style="display:flex; justify-content: end; align-items: center;">
+                            <img class="mute" style="margin-right: 0px;" onclick="mute()" width="25"
+                                src="images/volume.svg" alt="">
+                            <div class="range">
+                                <label for="volume"></label>
+                                <input id="volume" type="range" name="volume" id="volume" placeholder="">
+                            </div>
                         </div>
-                    </div>
+
+                    </span>
+
                     <div class="seekbar">
                         <span class="white" style="color: white;"></span>
                         <span class="moveable"></span>
                     </div>
+
                 </div>
             </div>
         </div>
-        <!-- <div><img src="images/hamburger.svg" alt=""></div> -->
-        <script src="script.js"></script>
+        <script src="script2.js"></script>
 </body>
 
 </html>

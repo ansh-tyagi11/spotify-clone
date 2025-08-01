@@ -1,6 +1,7 @@
 @media only screen and (max-width:1024px) {
     .nav {
         max-height: 32px;
+        max-width: 1023px;
     }
 
     .logo {
@@ -25,8 +26,16 @@
         display: none;
     }
 
-    .links {
-        margin-top: 10px;
+    .bar {
+        margin: 5px 10px 0px 2px;
+    }
+
+    .install {
+        padding-right: 10px;
+    }
+
+    .sign {
+        margin-right: 15px;
     }
 
     .links a {
@@ -107,7 +116,7 @@
     }
 
     .left {
-        /* display: none; */
+        display: none;
         padding-top: 0px;
         max-height: 87vh;
     }
@@ -119,6 +128,7 @@
 
     .library {
         margin-bottom: 10px;
+        padding: 12px 16px 8px;
     }
 
     .library img {
@@ -129,11 +139,16 @@
     /* .box1 h3{
     margin-top: 0px;
     } */
+     
     .box1 {
         margin-top: 0px;
         padding-bottom: 0px;
         margin-bottom: 0px;
         font-size: small;
+    }
+
+    .box1>h3 {
+        margin: 2px 0px 10px 20px;
     }
 
     .create-playlist-btn {
@@ -151,6 +166,10 @@
         margin-bottom: 0;
     }
 
+    .hover {
+        margin: 0px 3px 4px 3px;
+    }
+
     .language {
         margin-top: 10px;
         /* margin-left: 0; */
@@ -158,9 +177,22 @@
         margin-bottom: 2px;
     }
 
+    .mid {
+        display: none;
+    }
+
     .rightpart {
-        width: 45vw;
-        max-height: 77vh;
+        width: 88vw;
+        /* width: 100%; */
+        max-height: 75vh;
+    }
+
+    .right2 {
+        padding: 0px 10px;
+    }
+
+    .heading {
+        padding: 10px;
     }
 
     .trending1 {
@@ -171,20 +203,37 @@
         font-size: 15px;
     }
 
-    /* .play {
-        width: 65vw;
-        height: 8vh;
-        position: fixed;
-        border: 1px solid red;
-        margin: 3px;
-        background-color: #1ed760;
-    } */
-    .play {
-        /* width: 65vw; */
-        /* height: 8vh; */
-        /* position: fixed; */
-        /* border: 1px solid red; */
-        /* margin: 3px; */
-        background-color: #1ed760;
+    .card {
+        gap: 10px !important;
+    }
+
+    .card .song-card {
+        box-sizing: border-box;
+
+    }
+
+    .card {
+        margin-top: 8px;
+    }
+
+    .text2 {
+        font-size: 20px;
+    }
+
+    .mt {
+        font-size: 14px;
+    }
+
+    .card,
+    .popularcards,
+    .radiocards,
+    .impcards,
+    .chartscards {
+        margin-top: 0px;
+    }
+
+    .playbar {
+        width: 94vw;
+        max-height: 10vh;
     }
 }

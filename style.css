@@ -45,8 +45,9 @@ body {
 }
 
 .left {
-    width: 400px;
-    /* width: 25vw; */
+    /* width: 420px; */
+    width: 100%;
+    /* width: 35vw !important; */
     height: 91vh;
 }
 
@@ -106,7 +107,7 @@ body {
 }
 
 .text input {
-    border: none;
+    border: none !important;
     background-color: #1f1f1f;
     color: #B3B3B3;
 }
@@ -186,6 +187,15 @@ body {
 .download {
     filter: invert(1);
 }
+
+#hamburger {
+    display: inline;
+    z-index: 2;
+}
+
+/* .left {
+    display: none;
+} */
 
 .left {
     background-color: #121212;
@@ -275,15 +285,27 @@ body {
 }
 
 .mid {
+    position: relative;
+    width: 2px;
+    height: 90vh;
+    background: transparent;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.mid2 {
     position: absolute;
-    box-sizing: border-box;
-    /* margin: 3px; */
-    border: 1px solid #B3B3B3;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 90vh;
+    width: 2px;
+    background-color: #B3B3B3;
     display: none;
 }
 
-.mid:hover {
-    display: inline-block;
+.mid:hover .mid2 {
+    display: block;
 }
 
 /* ------------------------------------------------UTILITY 2---------------------------------------------------- */
@@ -317,7 +339,8 @@ body {
 }
 
 .right2 {
-    width: 75vw;
+    width: 69vw;
+    /* width: 100%; */
 }
 
 .invert2 {
@@ -366,15 +389,121 @@ body {
     flex-wrap: wrap;
 }
 
+/* Container for the trending section with scroll arrows */
+.trending-scroll-wrapper {
+    display: flex;
+    /* Makes it a flex container (items arranged in a row) */
+    align-items: center;
+    /* Vertically centers its children (arrows + cards) */
+    position: relative;
+    /* So arrows can be positioned absolutely within it */
+    width: 100%;
+    /* Full width of its parent */
+}
+
+.trending-scroll-wrapper:hover .arrow {
+    display: block !important;
+    /* Shows arrows when hovering over the wrapper */
+    pointer-events: auto;
+    /* Allows interaction with arrows when hovered */
+}
+
+/* Scrollable container holding the song cards */
+.card-container {
+    overflow-x: auto;
+    /* Allows horizontal scrolling */
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling (when scrolled programmatically) */
+    width: 100%;
+    /* Full width of wrapper */
+    display: block;
+    /* Block element (not flex) */
+    white-space: nowrap;
+    /* Prevents items from wrapping (keeps them in one row) */
+    flex: none;
+    /* Prevents it from shrinking inside flex parent */
+}
+
+/* Hides scrollbar (for WebKit browsers like Chrome, Safari) */
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Container for all cards (acts as the row of cards) */
+.card {
+    flex-wrap: nowrap;
+    /* Prevents cards from wrapping to the next line */
+    display: inline-flex;
+    /* Displays child items as flex but in an inline-block way */
+}
+
+/* Styles for each individual song card */
+.song-card {
+    transition: 0.3s ease;
+    /* Smooth background color transition on hover */
+    flex: 0 0 auto;
+    /* Prevent shrinking and growing (fixed width) */
+    width: 154px;
+    /* Fixed width for each card */
+    height: 250px;
+    /* Fixed height for each card */
+}
+
+/* General styles for both left/right scroll arrows */
+.arrow {
+    justify-content: center;
+    align-items: center;
+    display: none;
+    pointer-events: none;
+    /* Prevents interaction when not hovered */
+    position: absolute;
+    /* Position relative to .trending-scroll-wrapper */
+    top: 50%;
+    /* Vertically centered */
+    transform: translateY(-50%);
+    /* Centers arrow exactly in the middle vertically */
+    z-index: 2;
+    /* Ensures arrows stay above cards */
+    background-color: #252525;
+    /* Dark background for visibility */
+    border-radius: 100%;
+    /* Makes it circular */
+    padding: 8px 0px 0px 8px;
+    /* Space around the arrow icon */
+    cursor: pointer;
+    /* Cursor changes to pointer (clickable) */
+    display: block;
+    /* Makes sure it's displayed as a block */
+}
+
+/* Positioning for left arrow */
+.leftarrow {
+    left: 0;
+    /* Sticks to the left side */
+}
+
+/* Positioning for right arrow */
+.rightarrow {
+    right: 0;
+    /* Sticks to the right side */
+}
+
 .card,
 .popularcards,
 .radiocards,
 .impcards,
 .chartscards {
     display: flex;
+    overflow: hidden;
     gap: 20px;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     margin-top: 20px;
+    flex-wrap: nowrap;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    /* Prevents cards from wrapping to the next line */
+    display: inline-flex;
+    /* Displays child items as flex but in an inline-block way */
 }
 
 .song-card,
@@ -383,14 +512,20 @@ body {
 .imp-card,
 .charts-card {
     width: 154px;
+    height: 250px;
     position: relative;
     border-radius: 10px;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    transition: background-color 0.3s ease;
     padding: 12px;
     margin-top: 10px;
     gap: 4px;
     overflow: hidden;
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition on hover */
+    flex: 0 0 auto;
+    /* Prevent shrinking and growing (fixed width) */
 }
 
 .song-card>img,
@@ -439,8 +574,8 @@ body {
 
 .green {
     position: absolute;
-    bottom: 60px;
-    right: 20px;
+    bottom: 40px;
+    right: 17px;
 }
 
 .green img {
@@ -467,16 +602,26 @@ body {
 
 .circle {
     display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    /* Prevents cards from wrapping to the next line */
+    display: inline-flex;
+    /* Displays child items as flex but in an inline-block way */
 }
 
 .circle-card {
+    display: flex;
     position: relative;
     border-radius: 10px;
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: flex-start;
     padding: 5px 5px 5px 5px;
     margin-top: 10px;
     gap: 4px;
+    transition: background-color 0.3s ease;
+    /* Smooth background color transition on hover */
+    flex: 0 0 auto;
+    /* Prevent shrinking and growing (fixed width) */
 }
 
 .circle-card>img {
@@ -548,11 +693,11 @@ body {
 }
 
 .playbar {
-    width: 80%;
+    width: 74vw;
+    /* width: 100%; */
     height: 5rem;
-    position: fixed;
     border: 1px solid #1ed760;
-    margin: 3px;
+    margin: 3px 3px 0px 3px;
     background-color: #1ed760;
     border-radius: 5px;
     display: flex;
@@ -563,6 +708,11 @@ body {
     width: 20px;
     height: 24px;
     margin-right: 10px;
+}
+
+#songname span {
+    padding: 0;
+    margin: 0 0 0 10px;
 }
 
 .volume {
@@ -588,3 +738,33 @@ body {
     height: 10px;
     border: 1px solid white;
 }
+ /* .seekbar {
+    width: 100%;
+    height: 6px;
+    background: #ccc;
+    position: relative;
+    border-radius: 3px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.seekbar .white {
+    display: block;
+    height: 100%;
+    background: #1db954;
+    width: 0%;
+    border-radius: 3px 0 0 3px;
+}
+
+.seekbar .moveable {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+    transition: left 0.1s ease;
+} */
