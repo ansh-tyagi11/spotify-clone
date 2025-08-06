@@ -3,7 +3,6 @@ console.log('Let write javascript.')
 let audio;
 let songs;
 let currentSongIndex = 0;
-// audio = new Audio()
 const nextSong = document.getElementById("nextSong");
 const previousSong = document.getElementById("previousSong");
 let songname = document.getElementById("songname");
@@ -22,7 +21,6 @@ async function play() {
         audio = new Audio(songs[currentSongIndex])
         attachTimeUpdate()
     }
-    console.log("play run hua hai")
     let pause = document.querySelector(".play");
     let src = pause.src.split("/").pop();
     if (src === "play.svg") {
@@ -42,7 +40,6 @@ async function play() {
 }
 
 function mute() {
-    // await play()
     let pause = document.querySelector(".mute");
     let src = pause.src.split("/").pop();
     if (src === "volume.svg") {
@@ -56,7 +53,6 @@ function mute() {
 
 nextSong.addEventListener("click", () => {
     currentSongIndex = (currentSongIndex + 1) % songs.length;
-    console.log(currentSongIndex);
 
     let getsongname = songs[currentSongIndex].split("/").pop()
     songname.innerHTML = `<span>${getsongname.replace(".mp3", "").replace(".m4a", "").replaceAll("%20", " ")}</span>`
@@ -66,7 +62,6 @@ nextSong.addEventListener("click", () => {
 
 previousSong.addEventListener("click", () => {
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-    console.log(currentSongIndex);
 
     let songame = songs[currentSongIndex].split("/").pop()
     songname.innerHTML = `<span>${songame.replace(".mp3", "").replace(".m4a", "").replaceAll("%20", " ")}</span>`
@@ -77,7 +72,6 @@ previousSong.addEventListener("click", () => {
 async function playSong(song) {
     try {
         audio.src = song;
-        console.log(audio.src)
         await audio.play();
     }
     catch (error) {
