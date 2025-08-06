@@ -1,4 +1,4 @@
-console.log('Let write javascript')
+console.log('Let write javascript.')
 
 let audio;
 let songs;
@@ -10,7 +10,7 @@ let songname = document.getElementById("songname");
 let time = document.getElementById("time");
 
 async function getSongs() {
-    //  if (songs && songs.length > 0) return songs;
+    if (songs && songs.length > 0) return songs;
     let a = await fetch("./songs/")
     let response = await a.text()
     let div = document.createElement("div")
@@ -36,8 +36,8 @@ async function play() {
     let pause = document.querySelector(".play");
     let src = pause.src.split("/").pop();
     if (src === "play.svg") {
-        await audio.play()
         pause.src = "images/pause.svg"
+        await audio.play()
     }
     else if (src === "pause.svg") {
         audio.pause();
@@ -48,8 +48,7 @@ async function play() {
         pause.src = "images/play.svg"
     }
     let songa = songs[currentSongIndex].split("/").pop()
-    console.log(songa)
-    songname.innerHTML = `<span>${songa.replace(".mp3","").replaceAll("%20", " ")}</span>`
+    songname.innerHTML = `<span>${songa.replace(".mp3", "").replaceAll("%20", " ")}</span>`
 }
 
 function mute() {
@@ -65,33 +64,12 @@ function mute() {
     }
 }
 
-function mute() {
-    let pause = document.querySelector(".mute");
-    let src = pause.src.split("/").pop();
-    if (src === "volume.svg") {
-        pause.src = "images/mute.svg";
-        if (audio) audio.muted = true;
-    } else {
-        pause.src = "images/volume.svg";
-        if (audio) audio.muted = false;
-    }
-}
-
 nextSong.addEventListener("click", () => {
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     console.log(currentSongIndex);
 
-    let pause = document.querySelector(".play");
-    let src = pause.src.split("/").pop();
-    if (src === "play.svg") {
-        pause.src = "images/pause.svg";
-    }
-    else {
-        pause.src = "images/pause.svg";
-    }
-
     let getsongname = songs[currentSongIndex].split("/").pop()
-    songname.innerHTML = `<span>${getsongname.replace(".mp3","").replace(".m4a", "").replaceAll("%20", " ")}</span>`
+    songname.innerHTML = `<span>${getsongname.replace(".mp3", "").replace(".m4a", "").replaceAll("%20", " ")}</span>`
 
     playSong(songs[currentSongIndex]);
 });
@@ -100,25 +78,21 @@ previousSong.addEventListener("click", () => {
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
     console.log(currentSongIndex);
 
-    let pause = document.querySelector(".play");
-    let src = pause.src.split("/").pop();
-    if (src === "play.svg") {
-        pause.src = "images/pause.svg";
-    }
-    else {
-        pause.src = "images/pause.svg";
-    }
-
     let songame = songs[currentSongIndex].split("/").pop()
-    songname.innerHTML = `<span>${songame.replace("mp3","").replace(".m4a", "").replaceAll("%20", " ")}</span>`
+    songname.innerHTML = `<span>${songame.replace(".mp3", "").replace(".m4a", "").replaceAll("%20", " ")}</span>`
 
     playSong(songs[currentSongIndex]);
 })
 
-function playSong(song) {
-    audio.src = song;
-    console.log(audio.src)
-    audio.play();
+async function playSong(song) {
+    try {
+        audio.src = song;
+        console.log(audio.src)
+        await audio.play();
+    }
+    catch (error) {
+        console.log("Error playing song:", error);
+    };
 }
 
 function formatTime(seconds) {
@@ -128,7 +102,6 @@ function formatTime(seconds) {
 }
 
 function attachTimeUpdate() {
-    // await play()
     audio.addEventListener("timeupdate", () => {
         if (!isNaN(audio.duration)) {
             const current = formatTime(audio.currentTime);
@@ -142,7 +115,7 @@ function attachTimeUpdate() {
     audio.addEventListener("ended", () => {
         currentSongIndex = (currentSongIndex + 1) % songs.length;
         let nextSongName = songs[currentSongIndex].split("/").pop();
-        songname.innerHTML = `<span>${nextSongName.replace(".m4a", "").replaceAll("%20", " ")}</span>`;
+        songname.innerHTML = `<span>${nextSongName.replace(".mp3", "").replaceAll("%20", " ")}</span>`;
 
         audio.src = songs[currentSongIndex];
         audio.play().catch(err => console.error("Auto-play error:", err));
@@ -151,7 +124,6 @@ function attachTimeUpdate() {
         if (pause) pause.src = "images/pause.svg";
     });
 }
-// attachTimeUpdate()
 
 function showAll(sectionClass) {
     const card = document.querySelector(`.${sectionClass} .card,
@@ -252,7 +224,7 @@ setTimeout(() => {
         })
     }
     radio()
-}, 1000)
+}, 2000)
 
 setTimeout(() => {
     async function charts() {
@@ -271,7 +243,7 @@ setTimeout(() => {
         })
     }
     charts()
-}, 2000)
+}, 3000)
 
 setTimeout(() => {
     async function imp() {
@@ -290,7 +262,7 @@ setTimeout(() => {
         })
     }
     imp()
-}, 3000)
+}, 4000)
 
 document.addEventListener("DOMContentLoaded", () => {
 

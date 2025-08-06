@@ -425,7 +425,8 @@ body {
 }
 
 /* Hides scrollbar (for WebKit browsers like Chrome, Safari) */
-.card-container::-webkit-scrollbar {
+.card-container::-webkit-scrollbar,
+.rightpart::-webkit-scrollbar {
     display: none;
 }
 
@@ -453,7 +454,7 @@ body {
 .arrow {
     justify-content: center;
     align-items: center;
-    display: none;
+    display: none !important;
     pointer-events: none;
     /* Prevents interaction when not hovered */
     position: absolute;
@@ -738,7 +739,8 @@ body {
     height: 10px;
     border: 1px solid white;
 }
- /* .seekbar {
+
+/* .seekbar {
     width: 100%;
     height: 6px;
     background: #ccc;
