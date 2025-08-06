@@ -11,23 +11,13 @@ let time = document.getElementById("time");
 
 async function getSongs() {
     if (songs && songs.length > 0) return songs;
-    let a = await fetch("./songs/")
-    let response = await a.text()
-    let div = document.createElement("div")
-    div.innerHTML = response
-    let as = div.getElementsByTagName("a")
-    songs = []
-    for (let index = 0; index < as.length; index++) {
-        const element = as[index];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href)
-        }
-    }
-    return songs
+    const res = await fetch("./songs.json");
+    songs = await res.json();
+    return songs;
 }
-getSongs()
 
 async function play() {
+    await getSongs();
     if (!audio) {
         audio = new Audio(songs[currentSongIndex])
         attachTimeUpdate()
