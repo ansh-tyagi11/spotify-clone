@@ -34,7 +34,7 @@ spotify-clone/
 ├── FeaturedCards.json               # Featured playlists
 ├── indian_music_playlists.json      # Indian music playlist data
 ├── Popular.json                     # Popular songs data
-├── PopularRadio.json                 # Popular radio data
+├── PopularRadio.json                # Popular radio data
 ├── TrendingSongs.json               # Trending songs data
 ├── songs.json                       # Master list of all songs
 │
@@ -59,9 +59,9 @@ cd spotify-clone
 ```
 
 3️⃣ Run locally
---Just open index.html in your browser.
---(No server setup is required since all data is stored locally in JSON files.)
+ --Just open index.html in your browser.
+ --(No server setup is required since all data is stored locally in JSON files.)
 
 📜 License
---This project is for educational purposes only.
---All songs and assets are the property of their respective owners.
+ --This project is for educational purposes only.
+ --All songs and assets are the property of their respective owners.
