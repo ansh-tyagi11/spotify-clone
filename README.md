@@ -44,15 +44,20 @@ spotify-clone/
 ├── style.css                        # Main stylesheet
 ├── script.js                        # Main JavaScript logic
 
+```
+
 🚀 How to Run
 1️⃣ Clone this repository
 
-bash
+```bash
 git clone https://github.com/your-username/spotify-clone.git
-2️⃣ Open the project folder
+```
 
-bash
+2️⃣ Open the project folder
+```bash
 cd spotify-clone
+```
+
 3️⃣ Run locally
 Just open index.html in your browser.
 (No server setup is required since all data is stored locally in JSON files.)
