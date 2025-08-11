@@ -58,10 +58,13 @@ git clone https://github.com/your-username/spotify-clone.git
 cd spotify-clone
 ```
 
-3️⃣ Run locally
- --Just open index.html in your browser.
- --(No server setup is required since all data is stored locally in JSON files.)
+### 3️⃣ Run locally  
+Just open `index.html` in your browser.  
+*(No server setup is required since all data is stored locally in JSON files.)*
 
-📜 License
- --This project is for educational purposes only.
- --All songs and assets are the property of their respective owners.
+---
+
+## 📜 License  
+This project is for **educational purposes only**.  
+All songs and assets are the property of their respective owners.
+
