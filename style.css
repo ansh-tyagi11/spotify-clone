@@ -1,4 +1,3 @@
-/* -------------------------------------------------UTILITY 1----------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,6 @@
 
 body {
     background-color: black !important;
-    /* overflow-y:hidden; */
     overflow: hidden;
     font-family: SpotifyMixUITitleVariable, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif), Helvetica Neue, helvetica, arial, Hiragino Kaku Gothic ProN, Meiryo, MS Gothic, sans-serif;
 }
@@ -45,9 +43,7 @@ body {
 }
 
 .left {
-    /* width: 420px; */
     width: 100%;
-    /* width: 35vw !important; */
     height: 91vh;
 }
 
@@ -63,8 +59,6 @@ body {
 .background {
     background-color: black;
 }
-
-/* ---------------------------------------------------STYLE 1-------------------------------------------------- */
 
 .nav {
     padding: 8px;
@@ -193,15 +187,10 @@ body {
     z-index: 2;
 }
 
-/* .left {
-    display: none;
-} */
-
 .left {
     background-color: #121212;
     border-radius: 10px;
     background-color: #121212;
-    /* box-shadow: 5px 5px 0px 5px black inset; */
     color: white;
 }
 
@@ -308,8 +297,6 @@ body {
     display: block;
 }
 
-/* ------------------------------------------------UTILITY 2---------------------------------------------------- */
-
 .flex2 {
     display: flex;
     flex-direction: column;
@@ -340,7 +327,6 @@ body {
 
 .right2 {
     width: 69vw;
-    /* width: 100%; */
 }
 
 .invert2 {
@@ -356,15 +342,11 @@ body {
     color: white;
 }
 
-/* --------------------------------------STYLE 2------------------------------------------- */
-
 .rightpart {
     border: none;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    /* overflow-x: scroll; */
-    /* overflow-x:hidden ; */
     max-height: 80vh;
 }
 
@@ -389,104 +371,66 @@ body {
     flex-wrap: wrap;
 }
 
-/* Container for the trending section with scroll arrows */
 .trending-scroll-wrapper {
     display: flex;
-    /* Makes it a flex container (items arranged in a row) */
     align-items: center;
-    /* Vertically centers its children (arrows + cards) */
     position: relative;
-    /* So arrows can be positioned absolutely within it */
     width: 100%;
-    /* Full width of its parent */
 }
 
 .trending-scroll-wrapper:hover .arrow {
     display: block !important;
-    /* Shows arrows when hovering over the wrapper */
     pointer-events: auto;
-    /* Allows interaction with arrows when hovered */
 }
 
-/* Scrollable container holding the song cards */
 .card-container {
     overflow-x: auto;
-    /* Allows horizontal scrolling */
     scroll-behavior: smooth;
-    /* Enables smooth scrolling (when scrolled programmatically) */
     width: 100%;
-    /* Full width of wrapper */
     display: block;
-    /* Block element (not flex) */
     white-space: nowrap;
-    /* Prevents items from wrapping (keeps them in one row) */
     flex: none;
-    /* Prevents it from shrinking inside flex parent */
 }
 
-/* Hides scrollbar (for WebKit browsers like Chrome, Safari) */
 .card-container::-webkit-scrollbar,
 .rightpart::-webkit-scrollbar {
     display: none;
 }
 
-/* Container for all cards (acts as the row of cards) */
 .card {
     flex-wrap: nowrap;
-    /* Prevents cards from wrapping to the next line */
     display: inline-flex;
-    /* Displays child items as flex but in an inline-block way */
 }
 
-/* Styles for each individual song card */
 .song-card {
     transition: 0.3s ease;
-    /* Smooth background color transition on hover */
     flex: 0 0 auto;
-    /* Prevent shrinking and growing (fixed width) */
     width: 154px;
-    /* Fixed width for each card */
     height: 250px;
-    /* Fixed height for each card */
 }
 
-/* General styles for both left/right scroll arrows */
 .arrow {
     justify-content: center;
     align-items: center;
     display: none !important;
     pointer-events: none;
-    /* Prevents interaction when not hovered */
     position: absolute;
-    /* Position relative to .trending-scroll-wrapper */
     top: 50%;
-    /* Vertically centered */
     transform: translateY(-50%);
-    /* Centers arrow exactly in the middle vertically */
     z-index: 2;
-    /* Ensures arrows stay above cards */
     background-color: #252525;
-    /* Dark background for visibility */
     border-radius: 100%;
-    /* Makes it circular */
     padding: 8px 0px 0px 8px;
-    /* Space around the arrow icon */
     cursor: pointer;
-    /* Cursor changes to pointer (clickable) */
     display: block;
-    /* Makes sure it's displayed as a block */
 }
 
-/* Positioning for left arrow */
 .leftarrow {
     left: 0;
-    /* Sticks to the left side */
 }
 
-/* Positioning for right arrow */
 .rightarrow {
     right: 0;
-    /* Sticks to the right side */
 }
 
 .card,
@@ -497,14 +441,11 @@ body {
     display: flex;
     overflow: hidden;
     gap: 20px;
-    /* justify-content: flex-start; */
     margin-top: 20px;
     flex-wrap: nowrap;
     display: inline-flex;
     flex-wrap: nowrap;
-    /* Prevents cards from wrapping to the next line */
     display: inline-flex;
-    /* Displays child items as flex but in an inline-block way */
 }
 
 .song-card,
@@ -517,16 +458,13 @@ body {
     position: relative;
     border-radius: 10px;
     flex-direction: column;
-    /* align-items: flex-start; */
     transition: background-color 0.3s ease;
     padding: 12px;
     margin-top: 10px;
     gap: 4px;
     overflow: hidden;
     transition: background-color 0.3s ease;
-    /* Smooth background color transition on hover */
     flex: 0 0 auto;
-    /* Prevent shrinking and growing (fixed width) */
 }
 
 .song-card>img,
@@ -568,9 +506,7 @@ body {
     overflow: hidden;
     width: 154px;
     white-space: nowrap;
-    /* Prevents text from wrapping */
     text-overflow: ellipsis;
-    /* Adds the "..." at the end */
 }
 
 .green {
@@ -605,9 +541,7 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: nowrap;
-    /* Prevents cards from wrapping to the next line */
     display: inline-flex;
-    /* Displays child items as flex but in an inline-block way */
 }
 
 .circle-card {
@@ -620,9 +554,7 @@ body {
     margin-top: 10px;
     gap: 4px;
     transition: background-color 0.3s ease;
-    /* Smooth background color transition on hover */
     flex: 0 0 auto;
-    /* Prevent shrinking and growing (fixed width) */
 }
 
 .circle-card>img {
@@ -656,7 +588,6 @@ body {
 }
 
 .company {
-    /* width: 20%; */
     margin-right: 24px;
     margin-bottom: 32px;
     display: flex;
@@ -695,7 +626,6 @@ body {
 
 .playbar {
     width: 74vw;
-    /* width: 100%; */
     height: 5rem;
     border: 1px solid #1ed760;
     margin: 3px 3px 0px 3px;
@@ -739,34 +669,3 @@ body {
     height: 10px;
     border: 1px solid white;
 }
-
-/* .seekbar {
-    width: 100%;
-    height: 6px;
-    background: #ccc;
-    position: relative;
-    border-radius: 3px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.seekbar .white {
-    display: block;
-    height: 100%;
-    background: #1db954;
-    width: 0%;
-    border-radius: 3px 0 0 3px;
-}
-
-.seekbar .moveable {
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 0%;
-    transform: translate(-50%, -50%);
-    pointer-events: auto;
-    transition: left 0.1s ease;
-} */
