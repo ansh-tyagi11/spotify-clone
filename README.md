@@ -47,6 +47,7 @@ spotify-clone/
 ```
 
 🚀 How to Run
+
 1️⃣ Clone this repository
 
 ```bash
