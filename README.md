@@ -51,7 +51,7 @@ spotify-clone/
 1️⃣ Clone this repository
 
 ```bash
-git clone https://github.com/your-username/spotify-clone.git
+git clone https://github.com/ansh-tyagi11/spotify-clone.git
 ```
 
 2️⃣ Open the project folder
