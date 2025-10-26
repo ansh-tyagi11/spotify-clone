@@ -86,13 +86,23 @@ function formatTime(seconds) {
 }
 
 function attachTimeUpdate() {
+    const seekbar = document.querySelector(".seekbar");
+    const filled = seekbar.querySelector(".white");
+    const thumb = seekbar.querySelector(".moveable");
+
     audio.addEventListener("timeupdate", () => {
         if (!isNaN(audio.duration)) {
             const current = formatTime(audio.currentTime);
             const total = formatTime(audio.duration);
             time.textContent = `${current} / ${total}`;
+
+            const progressPercent = (audio.currentTime / audio.duration) * 100;
+            filled.style.width = `${progressPercent}%`;
+            thumb.style.left = `${progressPercent}%`;
         } else {
             time.textContent = "00:00 / 00:00";
+            filled.style.width = "0%";
+            thumb.style.left = "0%";
         }
     });
 
@@ -100,12 +110,16 @@ function attachTimeUpdate() {
         currentSongIndex = (currentSongIndex + 1) % songs.length;
         let nextSongName = songs[currentSongIndex].split("/").pop();
         songname.innerHTML = `<span>${nextSongName.replace(".mp3", "").replaceAll("%20", " ")}</span>`;
-
         audio.src = songs[currentSongIndex];
         audio.play().catch(err => console.error("Auto-play error:", err));
+        document.querySelector(".play").src = "images/pause.svg";
+    });
 
-        let pause = document.querySelector(".play");
-        if (pause) pause.src = "images/pause.svg";
+    seekbar.addEventListener("click", (e) => {
+        const rect = seekbar.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const newTime = (clickX / rect.width) * audio.duration;
+        audio.currentTime = newTime;
     });
 }
 

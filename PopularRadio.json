@@ -1,102 +1,181 @@
 [
   {
     "artist": "Arijit Singh",
-    "collaborators": ["Sachin–Jigar", "Jeet Gannguli", "Atif Aslam"],
+    "collaborators": [
+      "Sachin–Jigar",
+      "Jeet Gannguli",
+      "Atif Aslam"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4YRxDV8wJFPHPTeXepOstw/en-GB"
   },
   {
     "artist": "KK",
-    "collaborators": ["Pritam", "Mustafa Zahid", "Ankit Tiwari"],
+    "collaborators": [
+      "Pritam",
+      "Mustafa Zahid",
+      "Ankit Tiwari"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4fEkbug6kZzzJ8eYX6Kbbp/en-GB"
   },
   {
     "artist": "Shreya Ghoshal",
-    "collaborators": ["Sonu Nigam", "A.R. Rahman", "Atif Aslam"],
+    "collaborators": [
+      "Sonu Nigam",
+      "A.R. Rahman",
+      "Atif Aslam"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/0oOet2f43PA68X5RxKobEy/en-GB"
   },
   {
     "artist": "Alka Yagnik",
-    "collaborators": ["Kumar Sanu", "Vinod Rathod", "Udit Narayan"],
+    "collaborators": [
+      "Kumar Sanu",
+      "Vinod Rathod",
+      "Udit Narayan"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/3gBKY0y3dFFVRqicLnVZYz/en-GB"
   },
   {
     "artist": "Diljit Dosanjh",
-    "collaborators": ["Shubh", "Karan Aujla", "Sidhu Moose Wala"],
+    "collaborators": [
+      "Shubh",
+      "Karan Aujla",
+      "Sidhu Moose Wala"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/2FKWNmZWDBZR4dE5KX4plR/en-GB"
   },
   {
     "artist": "A.R. Rahman",
-    "collaborators": ["G. V. Prakash", "Hariharan", "Sid Sriram"],
+    "collaborators": [
+      "G. V. Prakash",
+      "Hariharan",
+      "Sid Sriram"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/1mYsTxnqsietFxj1OgoGbG/en"
   },
   {
     "artist": "Yo Yo Honey Singh",
-    "collaborators": ["Badshah", "Guru Randhawa", "Aastha Gill"],
+    "collaborators": [
+      "Badshah",
+      "Guru Randhawa",
+      "Aastha Gill"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/7uIbLdzzSEqnX0Pkrb56cR/en-GB"
   },
   {
     "artist": "Sidhu Moose Wala",
-    "collaborators": ["Shubh", "AP Dhillon", "Amrinder Gill"],
+    "collaborators": [
+      "Shubh",
+      "AP Dhillon",
+      "Amrinder Gill"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4PULA4EFzYTrxYvOVlwpiQ/en-GB"
   },
   {
     "artist": "Kishore Kumar",
-    "collaborators": ["Mukesh", "Hemant Kumar", "Lata Mangeshkar"],
+    "collaborators": [
+      "Mukesh",
+      "Hemant Kumar",
+      "Lata Mangeshkar"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/0GF4shudTAFv8ak9eWdd4Y/en-GB"
   },
   {
     "artist": "Kumar Sanu",
-    "collaborators": ["Alka Yagnik", "Jatin–Lalit", "Vinod Rathod"],
+    "collaborators": [
+      "Alka Yagnik",
+      "Jatin–Lalit",
+      "Vinod Rathod"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4K6blSRoklNdpw4mzLxwfn/en-GB"
   },
   {
     "artist": "Ilaiyaraaja",
-    "collaborators": ["K. J. Yesudas", "Swarnalatha", "Uma Ramanan"],
+    "collaborators": [
+      "K. J. Yesudas",
+      "Swarnalatha",
+      "Uma Ramanan"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/3m49WVMU4zCkaVEKb8kFW7/en-GB"
   },
   {
     "artist": "G. V. Prakash",
-    "collaborators": ["Hiphop Tamizha", "Harris Jayaraj", "Sean Roldan"],
+    "collaborators": [
+      "Hiphop Tamizha",
+      "Harris Jayaraj",
+      "Sean Roldan"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/5VVN3xZw1i2qihfITZlvCZ/en"
   },
   {
     "artist": "Karan Aujla",
-    "collaborators": ["Shubh", "AP Dhillon", "DIVINE"],
+    "collaborators": [
+      "Shubh",
+      "AP Dhillon",
+      "DIVINE"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/6DARBhWbfcS9E4yJzcliqQ/en-GB"
   },
   {
     "artist": "Lata Mangeshkar",
-    "collaborators": ["Mohammed Rafi", "Mukesh", "Manna Dey"],
+    "collaborators": [
+      "Mohammed Rafi",
+      "Mukesh",
+      "Manna Dey"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/61JrslREXq98hurYL2hYoc/en-GB"
   },
   {
     "artist": "Shubh",
-    "collaborators": ["Karan Aujla", "AP Dhillon", "Cheema Y"],
+    "collaborators": [
+      "Karan Aujla",
+      "AP Dhillon",
+      "Cheema Y"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/5r3wPya2PpeTTsXsGhQU8O/en-GB"
   },
   {
     "artist": "Udit Narayan",
-    "collaborators": ["Uttam Singh", "Alka Yagnik", "Vinod Rathod"],
+    "collaborators": [
+      "Uttam Singh",
+      "Alka Yagnik",
+      "Vinod Rathod"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/70B80Lwx2sxti0M1Ng9e8K/en-GB"
   },
   {
     "artist": "Masoom Sharma",
-    "collaborators": ["Sumit Parta", "Amnraj Gill", "Vikram Sarkar"],
+    "collaborators": [
+      "Sumit Parta",
+      "Amnraj Gill",
+      "Vikram Sarkar"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/36iDrP3UnCxsSH9LuSdkDj/en-GB"
   },
   {
     "artist": "Mohammed Rafi",
-    "collaborators": ["Hemant Kumar", "Geeta Dutt", "Asha Bhosle"],
+    "collaborators": [
+      "Hemant Kumar",
+      "Geeta Dutt",
+      "Asha Bhosle"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/0gXDpqwYNDODn7fB0RDN8J/en-GB"
   },
   {
     "artist": "Rahat Fateh Ali Khan",
-    "collaborators": ["Kailash Kher", "Mustafa Zahid", "Ankit Tiwari"],
+    "collaborators": [
+      "Kailash Kher",
+      "Mustafa Zahid",
+      "Ankit Tiwari"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/3OLGltG8UPIea8sA4w0yg0/en-GB"
   },
   {
     "artist": "S. P. Balasubrahmanyam",
-    "collaborators": ["Annamayya Keerthana", "M. M. Keeravani"],
+    "collaborators": [
+      "Annamayya Keerthana",
+      "M. M. Keeravani"
+    ],
     "image": "https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/2ae6PxICSOZHvjqiCcgon8/en-GB"
   }
 ]
